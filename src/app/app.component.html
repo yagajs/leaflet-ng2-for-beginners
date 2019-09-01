@@ -5,8 +5,9 @@
 
     <yaga-marker yaga-overlay-layer caption="Location Picker" [(lat)]="data.locationPicker.lat" [(lng)]="data.locationPicker.lng" [draggable]="data.locationPicker.draggable">
       <yaga-popup>
-        Latitude: {{ data.locationPicker.lat }}<br/>
-        Longitude: {{ data.locationPicker.lng }}
+        Latitude: <input type="number" [(ngModel)]="data.locationPicker.lat" /><br/>
+        Longitude: <input type="number" [(ngModel)]="data.locationPicker.lng" /><br/>
+        Draggable: <input type="checkbox" [(ngModel)]="data.locationPicker.draggable" />
       </yaga-popup>
     </yaga-marker>
   </yaga-layers-control>
