@@ -3,13 +3,19 @@
     <yaga-tile-layer yaga-base-layer caption="OpenStreetMap" url="http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" attribution="©OpenStreetmap"></yaga-tile-layer>
     <yaga-tile-layer yaga-base-layer caption="OpenTopoMap" url="http://{s}.tile.opentopomap.org/{z}/{x}/{y}.png" attribution="©OpenStreetmap"></yaga-tile-layer>
 
-    <yaga-marker yaga-overlay-layer caption="Location Picker" [(lat)]="data.locationPicker.lat" [(lng)]="data.locationPicker.lng" [draggable]="data.locationPicker.draggable">
-      <yaga-popup>
-        Latitude: <input type="number" [(ngModel)]="data.locationPicker.lat" /><br/>
-        Longitude: <input type="number" [(ngModel)]="data.locationPicker.lng" /><br/>
-        Draggable: <input type="checkbox" [(ngModel)]="data.locationPicker.draggable" />
-      </yaga-popup>
-    </yaga-marker>
+    <yaga-feature-group yaga-overlay-layer caption="Location Picker">
+      <yaga-marker [(lat)]="data.locationPicker.lat" [(lng)]="data.locationPicker.lng" [draggable]="data.locationPicker.draggable">
+        <yaga-popup>
+          Latitude: <input type="number" [(ngModel)]="data.locationPicker.lat" /><br/>
+          Longitude: <input type="number" [(ngModel)]="data.locationPicker.lng" /><br/>
+          Radius: <input type="number" [(ngModel)]="data.locationPicker.radius" /><br/>
+          Draggable: <input type="checkbox" [(ngModel)]="data.locationPicker.draggable" />
+        </yaga-popup>
+      </yaga-marker>
+      <yaga-circle [lat]="data.locationPicker.lat" [lng]="data.locationPicker.lng" [radius]="data.locationPicker.radius" color="red">
+
+      </yaga-circle>
+    </yaga-feature-group>
   </yaga-layers-control>
 
   <yaga-zoom-control></yaga-zoom-control>
