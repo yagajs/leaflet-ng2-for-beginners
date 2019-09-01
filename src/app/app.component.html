@@ -26,6 +26,12 @@
       </yaga-popup>
     </yaga-polygon>
 
+    <yaga-polyline *ngFor="let feature of ((getFeatureCollection('line.geojson') | async) || {'features': []}).features" [geoJSON]="feature" color="red" yaga-overlay-layer [caption]="feature.properties.name">
+      <yaga-tooltip [opened]="true" [permanent]="true">
+        {{ feature.properties.name }}
+      </yaga-tooltip>
+    </yaga-polyline>
+
   </yaga-layers-control>
 
   <yaga-zoom-control></yaga-zoom-control>
