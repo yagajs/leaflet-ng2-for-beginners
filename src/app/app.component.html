@@ -3,9 +3,10 @@
     <yaga-tile-layer yaga-base-layer caption="OpenStreetMap" url="http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" attribution="©OpenStreetmap"></yaga-tile-layer>
     <yaga-tile-layer yaga-base-layer caption="OpenTopoMap" url="http://{s}.tile.opentopomap.org/{z}/{x}/{y}.png" attribution="©OpenStreetmap"></yaga-tile-layer>
 
-    <yaga-marker yaga-overlay-layer caption="Sample Marker" [lat]="51" [lng]="7">
+    <yaga-marker yaga-overlay-layer caption="Location Picker" [(lat)]="data.locationPicker.lat" [(lng)]="data.locationPicker.lng" [draggable]="data.locationPicker.draggable">
       <yaga-popup>
-        A sample marker
+        Latitude: {{ data.locationPicker.lat }}<br/>
+        Longitude: {{ data.locationPicker.lng }}
       </yaga-popup>
     </yaga-marker>
   </yaga-layers-control>
