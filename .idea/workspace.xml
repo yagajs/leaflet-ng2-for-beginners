@@ -1,32 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a07eb1d1-d199-4ed1-96a7-21eb0132d034" name="Default Changelist" comment="Adding code that">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/leaflet-ng2-for-beginners.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/app.simple-model.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/geojson/line.geojson" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/geojson/point.geojson" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/geojson/polygon.geojson" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/layers-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/layers.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/marker-icon-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/marker-shadow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/leaflet.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    <list default="true" id="a07eb1d1-d199-4ed1-96a7-21eb0132d034" name="Default Changelist" comment="Step 8: Load and display points from a geojson file&#10;    &#10;We add:&#10;* a marker and iterate over the features of the provided points in a&#10;geojson file.&#10;* using the `getFeatureCollection` method of our app-component to get&#10;the content of a geojson file located in the assets.&#10;* pipe to `async`, because loading content can not be provided&#10;synchronous.&#10;* an OR operator (`||`) to provide an empty array of features as&#10;fallback.&#10;&#10;Before we start the tutorial, we already implement the method&#10;`getFeatureCollection`in our app-component. This method provides a way&#10;to serve the content of a geojson file to Angular. The file must be&#10;stored in `src/assets/geojson/` folder. The parameter of the function&#10;must be the filename. For example to get a geojson called&#10;`example.geojson` stored in the geojson folder you have to call&#10;`getFeatureCollection('filename')`. In most cases you will also provide&#10;a pipe (Angular syntax is: ` | `) to `async`. This will wait for the&#10;result of a asynchronous call. Fetching data should not be done in&#10;synchronous way. As long as the data is not available, it will be&#10;represented as value `null`. This is why we provide a fallback value&#10;with the OR-Operator (` || `). This operator will provide the value&#10;given on the left side, excepts it is not available then it will return&#10;the value of the right side. For example if `data.someValue` is not&#10;available you can provide a fallback value with:&#10;`data.someValue || 'no data available''`.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/dist/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -45,8 +22,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/app.component.spec.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+            <state relative-caret-position="258">
+              <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
               <folding>
                 <element signature="e#0#55#0" expanded="true" />
               </folding>
@@ -108,8 +85,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/app.simple-model.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="120">
+              <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -117,8 +94,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/app/app.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="270">
+              <caret line="18" column="37" lean-forward="true" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
               <folding>
                 <element signature="n#style#0;n#yaga-map#0;n#!!top" expanded="true" />
               </folding>
@@ -146,10 +123,10 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/index.html" />
         <option value="$PROJECT_DIR$/src/app/app.module.ts" />
-        <option value="$PROJECT_DIR$/src/app/app.simple-model.ts" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/app/app.component.spec.ts" />
         <option value="$PROJECT_DIR$/src/app/app.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/app.simple-model.ts" />
         <option value="$PROJECT_DIR$/src/app/app.component.html" />
       </list>
     </option>
@@ -317,33 +294,97 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1567347549510</updated>
-      <workItem from="1567347551185" duration="3030000" />
+      <workItem from="1567347551185" duration="15655000" />
     </task>
+    <task id="LOCAL-00001" summary="Basic setup for the tutorial">
+      <created>1567351083591</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1567351083591</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Step 1: Add controls on the map&#10;&#10;We add:&#10;* `yaga-zoom-control` to provide zoom buttons&#10;* `yaga-attribution-control` to provide attributions of active layers&#10;* `yaga-scale-control` to provide a scale on the map&#10;&#10;We must use an Angular setter to pass the value false (not the string&#10;&quot;false&quot;) to the attribution-control directive. An Angular setter is an&#10;HTML attribute that can handle dynamic values from the Angular&#10;environment instead of using static (string) values.&#10;&#10;This knowledge we also apply to the `lat`, `lng` and `zoom` attributes&#10;of the map, because it should also use numbers and not their string&#10;representation.">
+      <created>1567352255469</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1567352255469</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Step 2: Add layers-control directive&#10;&#10;We add:&#10;* `yaga-layers-control` to provide a layer-tree&#10;&#10;In addition:&#10;* We move the `yaga-tile-layer` for OSM into the `yaga-layers-control`&#10;directive. the `yaga-layers-control` directive provides the possibility&#10;to use the `yaga-base-layer` and `yaga-base-layer` directive within any&#10;YAGA layer directive. &#10;* We add the `yaga-base-layer` directive to our existing OSM tile layer.&#10;In addition we provide a caption for this layer in the layer tree with&#10;the `caption` attribute.&#10;* In the same way we create now a base-layer for OpenTopoMap.">
+      <created>1567353191255</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1567353191255</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Step 3: Add a simple marker&#10;&#10;We add:&#10;* `yaga-marker` to provide a marker. We also provide coordinates with&#10;the help of `[lat]` and `[lng]` setters.&#10;* because we add the marker directive within the layers-control&#10;directive we are able to apply the `yaga-overlay-layer` directive to the&#10;marker. Also we add a caption.&#10;* `yaga-popup` within the marker to provide a popup.&#10;* normal HTML content within the popup directive.">
+      <created>1567353898257</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1567353898257</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Step 4: Convert simple marker into a location picker&#10;&#10;We add:&#10;* a data-model for a location-picker including `lat` and `lng` for the&#10;coordinates and `draggable` for the draggable state of picker.&#10;* the `[draggable]` setter to the marker. We also connect this to our&#10;model (we will use it later interactive).&#10;&#10;Changes:&#10;* bind `lat` and `lng` of the marker to the data-model, also. In&#10;addition enhance the Angular setter to a two-way-bound. That means that&#10;changes on the directive will be updated in the data-model and changes&#10;on the data-model will be updated in the directive.&#10;* the popup content will now display the coordinates of the marker via&#10;Angular's interpolation in templates.&#10;&#10;Angular provides interpolation in templates (eg.:&#10;`{{ path.within.dataModel }}`). This provides a simple way to output&#10;values from the data-model.&#10;&#10;Angular's syntax to provide a binding between the data-model and a&#10;directive in both directions is `[(attributeName)]`. Just to remember,&#10;when you only want to provide values and changes from the data-model&#10;to the directive you use this syntax: `[attributeName]`.">
+      <created>1567356677178</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1567356677178</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Step 5: Make picker configurable in popup&#10;&#10;We add:&#10;* a checkbox via the `input` element and connect it to the data-model in&#10;two-way to the draggable property of the locationPicker.&#10;&#10;Changes:&#10;* the coordinates in the popup are two-way-bound via `input`'s, now.">
+      <created>1567357918317</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1567357918317</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Step 6: Add a configurable radius around the location picker&#10;&#10;We add:&#10;* a radius property in the data-model for the location picker.&#10;* `yaga-circle` to provide a circle with a radius measured in meter. We&#10;paint the circle red in addition.&#10;* `yaga-feature-group` to bundle the marker and the circle together as&#10;one in the layer-tree.&#10;* An `input` for the radius in the popup content.&#10;&#10;Changes:&#10;* we moved the `yaga-overlay-layer` directive and its caption to the&#10;`yaga-feature-group` directive.">
+      <created>1567359148331</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1567359148331</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Step 7: Make base-layers configurable over the data-model&#10;&#10;We add:&#10;* An array of objects to our data-model describing a base-layer in the&#10;layer-tree.&#10;* `*ngFor` structural-directive to iterate over the baseLayer objects of&#10;the baseLayer array.&#10;* a dynamic tile-layer definition via `*ngFor` and Angular setters&#10;&#10;Changes:&#10;* remove static tile-layer definitions&#10;&#10;`*ngFor` is a structural directive of Angular. It provides the&#10;possibility to iterate over a list of elements. You can access an&#10;element of the list via a variable similar like you access the&#10;data-model. For example if you have a list of names in a property called&#10;`participants` in your data-model and want to access each name in a&#10;variable called `participant` you can iterate like this:&#10;`&lt;ul&gt;&lt;li *ngFor=&quot;let participants of data.participants&quot;&gt;{{ participant }}&lt;/li&gt;&lt;/ul&gt;`&#10;and get a list of the names of the participants. We do the same with the&#10;layers.">
+      <created>1567361403014</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1567361403014</updated>
+    </task>
+    <task id="LOCAL-00009" summary="fixup 7">
+      <created>1567361860383</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1567361860383</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3030000" />
+    <option name="totallyTimeSpent" value="15655000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info id="Image Layers" />
       <window_info id="Designer" />
       <window_info id="Capture Tool" />
       <window_info id="Learn" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24969475" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24969475" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="TypeScript" />
+      <window_info active="true" anchor="bottom" id="Messages" visible="true" weight="0.32959184" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" weight="0.32959184" />
+      <window_info anchor="bottom" id="Terminal" weight="0.71224487" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32959184" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32959184" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -360,6 +401,19 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Basic setup for the tutorial" />
+    <MESSAGE value="Step 1: Add controls on the map&#10;&#10;We add:&#10;* `yaga-zoom-control` to provide zoom buttons&#10;* `yaga-attribution-control` to provide attributions of active layers&#10;* `yaga-scale-control` to provide a scale on the map&#10;&#10;We must use an Angular setter to pass the value false (not the string&#10;&quot;false&quot;) to the attribution-control directive. An Angular setter is an&#10;HTML attribute that can handle dynamic values from the Angular&#10;environment instead of using static (string) values.&#10;&#10;This knowledge we also apply to the `lat`, `lng` and `zoom` attributes&#10;of the map, because it should also use numbers and not their string&#10;representation." />
+    <MESSAGE value="Step 2: Add layers-control directive&#10;&#10;We add:&#10;* `yaga-layers-control` to provide a layer-tree&#10;&#10;In addition:&#10;* We move the `yaga-tile-layer` for OSM into the `yaga-layers-control`&#10;directive. the `yaga-layers-control` directive provides the possibility&#10;to use the `yaga-base-layer` and `yaga-base-layer` directive within any&#10;YAGA layer directive. &#10;* We add the `yaga-base-layer` directive to our existing OSM tile layer.&#10;In addition we provide a caption for this layer in the layer tree with&#10;the `caption` attribute.&#10;* In the same way we create now a base-layer for OpenTopoMap." />
+    <MESSAGE value="Step 3: Add a simple marker&#10;&#10;We add:&#10;* `yaga-marker` to provide a marker. We also provide coordinates with&#10;the help of `[lat]` and `[lng]` setters.&#10;* because we add the marker directive within the layers-control&#10;directive we are able to apply the `yaga-overlay-layer` directive to the&#10;marker. Also we add a caption.&#10;* `yaga-popup` within the marker to provide a popup.&#10;* normal HTML content within the popup directive." />
+    <MESSAGE value="Step 4: Convert simple marker into a location picker&#10;&#10;We add:&#10;* a data-model for a location-picker including `lat` and `lng` for the&#10;coordinates and `draggable` for the draggable state of picker.&#10;* the `[draggable]` setter to the marker. We also connect this to our&#10;model (we will use it later interactive).&#10;&#10;Changes:&#10;* bind `lat` and `lng` of the marker to the data-model, also. In&#10;addition enhance the Angular setter to a two-way-bound. That means that&#10;changes on the directive will be updated in the data-model and changes&#10;on the data-model will be updated in the directive.&#10;* the popup content will now display the coordinates of the marker via&#10;Angular's interpolation in templates.&#10;&#10;Angular provides interpolation in templates (eg.:&#10;`{{ path.within.dataModel }}`). This provides a simple way to output&#10;values from the data-model.&#10;&#10;Angular's syntax to provide a binding between the data-model and a&#10;directive in both directions is `[(attributeName)]`. Just to remember,&#10;when you only want to provide values and changes from the data-model&#10;to the directive you use this syntax: `[attributeName]`." />
+    <MESSAGE value="Step 5: Make picker configurable in popup&#10;&#10;We add:&#10;* a checkbox via the `input` element and connect it to the data-model in&#10;two-way to the draggable property of the locationPicker.&#10;&#10;Changes:&#10;* the coordinates in the popup are two-way-bound via `input`'s, now." />
+    <MESSAGE value="Step 6: Add a configurable radius around the location picker&#10;&#10;We add:&#10;* a radius property in the data-model for the location picker.&#10;* `yaga-circle` to provide a circle with a radius measured in meter. We&#10;paint the circle red in addition.&#10;* `yaga-feature-group` to bundle the marker and the circle together as&#10;one in the layer-tree.&#10;* An `input` for the radius in the popup content.&#10;&#10;Changes:&#10;* we moved the `yaga-overlay-layer` directive and its caption to the&#10;`yaga-feature-group` directive." />
+    <MESSAGE value="Step 7: Make base-layers configurable over the data-model&#10;&#10;We add:&#10;* An array of objects to our data-model describing a base-layer in the&#10;layer-tree.&#10;* `*ngFor` structural-directive to iterate over the baseLayer objects of&#10;the baseLayer array.&#10;* a dynamic tile-layer definition via `*ngFor` and Angular setters&#10;&#10;Changes:&#10;* remove static tile-layer definitions&#10;&#10;`*ngFor` is a structural directive of Angular. It provides the&#10;possibility to iterate over a list of elements. You can access an&#10;element of the list via a variable similar like you access the&#10;data-model. For example if you have a list of names in a property called&#10;`participants` in your data-model and want to access each name in a&#10;variable called `participant` you can iterate like this:&#10;`&lt;ul&gt;&lt;li *ngFor=&quot;let participants of data.participants&quot;&gt;{{ participant }}&lt;/li&gt;&lt;/ul&gt;`&#10;and get a list of the names of the participants. We do the same with the&#10;layers." />
+    <MESSAGE value="fixup 7" />
+    <MESSAGE value="Step 8: Load and display points from a geojson file&#10;    &#10;We add:&#10;* a marker and iterate over the features of the provided points in a&#10;geojson file.&#10;* using the `getFeatureCollection` method of our app-component to get&#10;the content of a geojson file located in the assets.&#10;* pipe to `async`, because loading content can not be provided&#10;synchronous.&#10;* an OR operator (`||`) to provide an empty array of features as&#10;fallback.&#10;&#10;Before we start the tutorial, we already implement the method&#10;`getFeatureCollection`in our app-component. This method provides a way&#10;to serve the content of a geojson file to Angular. The file must be&#10;stored in `src/assets/geojson/` folder. The parameter of the function&#10;must be the filename. For example to get a geojson called&#10;`example.geojson` stored in the geojson folder you have to call&#10;`getFeatureCollection('filename')`. In most cases you will also provide&#10;a pipe (Angular syntax is: ` | `) to `async`. This will wait for the&#10;result of a asynchronous call. Fetching data should not be done in&#10;synchronous way. As long as the data is not available, it will be&#10;represented as value `null`. This is why we provide a fallback value&#10;with the OR-Operator (` || `). This operator will provide the value&#10;given on the left side, excepts it is not available then it will return&#10;the value of the right side. For example if `data.someValue` is not&#10;available you can provide a fallback value with:&#10;`data.someValue || 'no data available''`." />
+    <option name="LAST_COMMIT_MESSAGE" value="Step 8: Load and display points from a geojson file&#10;    &#10;We add:&#10;* a marker and iterate over the features of the provided points in a&#10;geojson file.&#10;* using the `getFeatureCollection` method of our app-component to get&#10;the content of a geojson file located in the assets.&#10;* pipe to `async`, because loading content can not be provided&#10;synchronous.&#10;* an OR operator (`||`) to provide an empty array of features as&#10;fallback.&#10;&#10;Before we start the tutorial, we already implement the method&#10;`getFeatureCollection`in our app-component. This method provides a way&#10;to serve the content of a geojson file to Angular. The file must be&#10;stored in `src/assets/geojson/` folder. The parameter of the function&#10;must be the filename. For example to get a geojson called&#10;`example.geojson` stored in the geojson folder you have to call&#10;`getFeatureCollection('filename')`. In most cases you will also provide&#10;a pipe (Angular syntax is: ` | `) to `async`. This will wait for the&#10;result of a asynchronous call. Fetching data should not be done in&#10;synchronous way. As long as the data is not available, it will be&#10;represented as value `null`. This is why we provide a fallback value&#10;with the OR-Operator (` || `). This operator will provide the value&#10;given on the left side, excepts it is not available then it will return&#10;the value of the right side. For example if `data.someValue` is not&#10;available you can provide a fallback value with:&#10;`data.someValue || 'no data available''`." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/app/app.component.css">
@@ -385,13 +439,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/assets/geojson/line.geojson">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -414,27 +461,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/app.component.spec.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#55#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="428">
           <caret line="37" column="29" lean-forward="true" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/app.simple-model.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
@@ -448,10 +478,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.component.spec.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.simple-model.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/app.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="270">
+          <caret line="18" column="37" lean-forward="true" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
           <folding>
             <element signature="n#style#0;n#yaga-map#0;n#!!top" expanded="true" />
           </folding>

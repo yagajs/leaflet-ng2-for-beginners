@@ -13,6 +13,12 @@
       </yaga-marker>
       <yaga-circle [lat]="data.locationPicker.lat" [lng]="data.locationPicker.lng" [radius]="data.locationPicker.radius" color="red"></yaga-circle>
     </yaga-feature-group>
+
+    <yaga-marker *ngFor="let feature of ((getFeatureCollection('point.geojson') | async) || {'features': []}).features" [lat]="feature.geometry.coordinates[1]" [lng]="feature.geometry.coordinates[0]" yaga-overlay-layer [caption]="feature.properties.name">
+      <yaga-popup>
+        {{ feature.properties.name }}
+      </yaga-popup>
+    </yaga-marker>
   </yaga-layers-control>
 
   <yaga-zoom-control></yaga-zoom-control>
