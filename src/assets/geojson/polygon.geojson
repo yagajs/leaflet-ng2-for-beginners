@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "polygon",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "name": "Köln-Bonn", "color": "#f0f" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 6.962120903799498, 50.935764432086863 ], [ 7.092323200523817, 50.732927977815308 ], [ 7.134488524035424, 50.866153649196967 ], [ 6.962120903799498, 50.935764432086863 ] ] ] } }
+]
+}

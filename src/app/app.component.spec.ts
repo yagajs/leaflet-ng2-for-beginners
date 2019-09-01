@@ -1,12 +1,14 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { YagaModule } from '@yaga/leaflet-ng2';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        AppComponent
-      ],
+      imports: [ YagaModule, HttpClientModule ],
+      declarations: [ AppComponent ],
+      providers: [ HttpClient ],
     }).compileComponents();
   }));
 
@@ -16,16 +18,22 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'leaflet-ng2-for-beginners'`, () => {
+  it('should have a simple data model', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('leaflet-ng2-for-beginners');
+    expect(app.data).toBeTruthy();
   });
 
-  it('should render title', () => {
+  it(`should get a geojson from the geoJSON folder`, async () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.componentInstance;
+    expect((await app.getFeatureCollection('point.geojson')).type).toBe('FeatureCollection');
+  });
+
+  it('should render the map', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('leaflet-ng2-for-beginners app is running!');
+    expect(compiled.querySelector('.leaflet-pane')).toBeTruthy();
   });
 });
