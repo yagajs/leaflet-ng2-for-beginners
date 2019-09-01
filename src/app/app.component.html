@@ -1,3 +1,7 @@
-<yaga-map style="position: fixed; top: 0; bottom: 0; right: 0; left: 0" lat="51" lng="7" zoom="10">
+<yaga-map style="position: fixed; top: 0; bottom: 0; right: 0; left: 0" [lat]="51" [lng]="7" [zoom]="10">
   <yaga-tile-layer url="http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" attribution="©OpenStreetmap"></yaga-tile-layer>
+
+  <yaga-zoom-control></yaga-zoom-control>
+  <yaga-scale-control [imperial]="false"></yaga-scale-control>
+  <yaga-attribution-control></yaga-attribution-control>
 </yaga-map>
